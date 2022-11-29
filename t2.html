@@ -11,6 +11,16 @@
 
 <div style="background:#98bf21;height:100px;width:200px;position:absolute;">HELLO</div>
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+<script>
+    $(document).ready(function(){
+      $("button").click(function(){
+        $("div").animate({left: "+=400", fontSize: "+=10"}, 1000)
+                .animate({left: "-=200", fontSize: "+=30"}, 1000)
+                .animate({left: "-=200", fontSize: "-=40"}, 1000, arguments.callee)
+      }); 
+  });    
+</script>
 </body>
 </html>
 
